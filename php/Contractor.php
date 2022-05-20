@@ -11,7 +11,7 @@
             if(strlen($data[0]) != 10) {$_SESSION['validateError'] = "Podano błeny NIP!"; $this->flag = false; } else {$this->nip = $data[0];}
             if(strlen($data[1]) != 9) {$_SESSION['validateError'] = "Podano błeny REGON!"; $this->flag = false; } else {$this->regon = $data[1];}
             if(strlen($data[2]) < 3 || strlen($data[2]) > 100) {$_SESSION['validateError'] = "Podano zlą nazwę!"; $this->flag = false; } else {$this->nazwa = $data[2];}
-            if($data[3] != 0) $this->czyVat = 1; else $this->czyVat = 0;
+            if($data[3] == 1) $this->czyVat = 1; else $this->czyVat = 0;
             if(strlen($data[4]) < 3 || strlen($data[4]) > 50) {$_SESSION['validateError'] = "Podano zlą ulicę!"; $this->flag = false; } else {$this->ulica = $data[4];}
             if(strlen($data[5]) < 1 || strlen($data[5]) > 20) {$_SESSION['validateError'] = "Podano błeny numer domu!"; $this->flag = false; } else {$this->nrDomu = $data[5];}
             if(strlen($data[6]) > 0) $this->nrMieszkania = $data[6];
@@ -63,7 +63,6 @@
         function editContractor($id){
             $db = new Database;
             $data = [
-                'ID' => NULL,
                 'nip' => $this->nip,
                 'regon' => $this->regon,
                 'nazwa' => $this->nazwa,
