@@ -1,0 +1,13 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-glowna index.html
+RewriteRule rozne-kontrolki-HTML kontrolki.html
+RewriteRule tabela-pracownikow pracownicy.php
+RewriteRule tabela-faktur-VAT faktury.php
+RewriteRule tabela-delegacji-BD delegacje.php
+RewriteRule dane-kontrahentow kontrahenci.php
