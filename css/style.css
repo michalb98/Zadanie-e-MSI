@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 :root{
     --backgroundColor: #16161a;
     --borderColor: #7f5af0;
@@ -15,6 +17,7 @@ body{
                   0px 1px black,
                   1px 0px black,
                   0 -1px black;
+    font-family: 'Lato', sans-serif;
 }
 
 #container{
@@ -73,6 +76,8 @@ footer{
     font-size: xx-large;
 }
 
+/* ---  Formularz --- */
+
 form, label{
     display: flex;
     align-items: center;
@@ -87,6 +92,64 @@ input[type=submit]{
 textarea {
     width: 20vw;
     height: 10vh;
+}
+
+button,
+input[type="submit"]{
+    width: auto;
+    background-color: var(--buttonBackground);
+    cursor: pointer;
+    padding: 15px;
+    font-size: large;
+    border: 2px solid var(--borderColor);
+    transition: border-radius 0.25s ease-in-out;
+    -webkit-transition: border-radius 0.25s ease-in-out;
+    -moz-transition: border-radius 0.25s ease-in-out;
+    -ms-transition: border-radius 0.25s ease-in-out;
+    -o-transition: border-radius 0.25s ease-in-out;
+}
+
+table input{
+    width: 80%;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+input,
+textarea,
+select{
+    background-color: transparent;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(-90deg, var(--borderColor), #d53a9d);
+    color: var(--colorText);
+    text-shadow: -1px 0 black,
+                  0px 1px black,
+                  1px 0px black,
+                  0 -1px black;
+    padding: 5px;
+}
+
+select option{
+    color: #16161a;
+}
+
+select{
+    color: var(--colorText) !important;
+}
+
+/* ---  Tabele --- */
+
+table{
+    width: 90%;
+    overflow: scroll;
 }
 
 table, tr, td{
@@ -117,38 +180,27 @@ tr:nth-child(odd){
     background-color: #7f5af0;
 }
 
+.iloscValue{
+    width: 35%;
+}
+
+/* ---  Picker --- */
+
 #picker{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.iloscValue{
-    width: 35%;
+input[type="color"]
+{
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    margin-top: 1vh;
 }
 
-button,
-input[type="submit"]{
-    background-color: var(--buttonBackground);
-    cursor: pointer;
-    padding: 15px;
-    font-size: large;
-    border: 2px solid var(--borderColor);
-    transition: border-radius 0.25s ease-in-out;
-    -webkit-transition: border-radius 0.25s ease-in-out;
-    -moz-transition: border-radius 0.25s ease-in-out;
-    -ms-transition: border-radius 0.25s ease-in-out;
-    -o-transition: border-radius 0.25s ease-in-out;
-}
-
-button:hover,
-input[type="submit"]:hover{
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
+/* ---  Inne --- */
 
 .usun{
     background-color: lightcoral !important;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Zadanie zdalne e-MSI</title>
+    <link rel="icon" href="./img/fav.png"> <!-- Source: https://www.flaticon.com/free-icon/task_762686 -->
 </head>
 <body>
     <div id="container">

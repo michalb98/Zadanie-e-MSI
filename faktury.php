@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Zadanie zdalne e-MSI</title>
+    <link rel="icon" href="./img/fav.png"> <!-- Source: https://www.flaticon.com/free-icon/task_762686 -->
 </head>
 <body>
     <div id="container">
@@ -119,9 +120,9 @@
         $("#powyzej").click( function(){
             $(".kwotaNetto").each(function(){
                 if(parseFloat($(this).html()) > 1000){
-                    $(this).nextAll().css("background-color", "green");
-                    $(this).css("background-color", "green");
-                    $(this).prevAll().css("background-color", "green");
+                    $(this).nextAll().css({"background-color": "green", "border-color": "#1a4f28"});
+                    $(this).css({"background-color": "green", "border-color": "#1a4f28"});
+                    $(this).prevAll().css({"background-color": "green", "border-color": "#1a4f28"});
                 }
             });
         });
