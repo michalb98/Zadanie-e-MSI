@@ -1,7 +1,7 @@
 <?php
     require_once("./php/Database.php");
 
-    class Contractor extends Database{
+    class Contractor{
 
         private $nip, $regon, $nazwa, $czyVat, $ulica, $nrDomu, $nrMieszkania;
 

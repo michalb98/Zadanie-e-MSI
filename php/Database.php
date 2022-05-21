@@ -1,8 +1,7 @@
 <?php
 
     class Database {
-
-        //Zmiene do bazy danych
+        
         private $host = "localhost";
         private $db_user = "root";
         private $db_pass = "";
