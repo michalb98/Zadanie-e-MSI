@@ -184,6 +184,15 @@ tr:nth-child(odd){
     width: 35%;
 }
 
+.optionContaienr{
+    display: flex;
+    border: 0;
+}
+
+.optionContaienr > input:nth-child(2){
+    margin-right: 5px;
+}
+
 /* ---  Picker --- */
 
 #picker{

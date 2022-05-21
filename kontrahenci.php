@@ -93,7 +93,7 @@
                                         <td><input type="text" name="ulica" value="'.$kontraheci[$i][4].'"></td>
                                         <td><input type="text" name="nrDomu" value="'.$kontraheci[$i][5].'"></td>
                                         <td><input type="text" name="nrMieszkania" value="'.$kontraheci[$i][6].'"></td>
-                                        <td>
+                                        <td class="optionContaienr">
                                             <input type="hidden" name="IdEdytuj" value="'.$kontraheci[$i][7].'">
                                             <input type="submit" value="Edytuj" class="Edytuj">  
                                     </form>
