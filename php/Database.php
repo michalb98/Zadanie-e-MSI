@@ -22,9 +22,13 @@
 
         function selectFromDatabase($select) {
             if ($this->db) {
-                $sth = $this->db->prepare("$select");
-                $sth->execute();
-                return $sth->fetchAll(PDO::FETCH_NUM);                
+                try {
+                    $sth = $this->db->prepare("$select");
+                    $sth->execute();
+                    return $sth->fetchAll(PDO::FETCH_NUM);     
+                } catch(Exception $e) {
+                    return $e->getMessage();
+                }           
             } else {
                 return 'Error';
             }
